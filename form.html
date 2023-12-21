@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
+</head>
+<div class="banner">
+    <div>
+      <h1>Biography Academy</h1>
+    </div>  
+  </div>
+  <nav>
+    <ul>
+        <br>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="form.html" >Feedback</a></li>
+        <li><a href="contact.html">About Us</a></li>
+    </ul>
+</nav><br><br>
+<hr>
+<body>
+
+    <section>
+        <p style="font-family: cursive; font-size: larger;">Do you have any questions? Please feel free to reach out!</p><br>
+        <form id="feedbackForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section><br><br>
+    <script>
+       document.getElementById('feedbackForm').addEventListener('submit', function(event)  {
+            event.preventDefault(); // Use the correct event parameter
+            const emailInput = document.getElementById('email').value;
+            // You can handle the email submission here (e.g., send it to a server).
+            console.log('Response taken!');
+        });
+    </script>
+    
+    <hr>
+    <footer>
+        <p>&copy; 2023 Biography Academy</p>
+    </footer>
+</body>
+</html>
